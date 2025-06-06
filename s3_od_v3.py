@@ -60,7 +60,7 @@ for key in list_of_objects[:]:
     result = cv.bitwise_and(im, im, mask=mask)
 
     # contours
-    # contours: tuple of arrays, cv.RETR_TREE: all, 
+    # contours: tuple of arrays; cv.RETR_TREE: all; cv.RETR_EXTERNAL: only parent contours 
     # cv.RETR_EXTERNAL: only external contours
     contours, hierarchy = cv.findContours(
         mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
